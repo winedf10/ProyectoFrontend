@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Facilit - Suscripción</title>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<style>
+    /* Estilos de centrar el contenido */
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #009df8;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .screen {
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .subscription__field {
+      margin-bottom: 15px;
+    }
+
+    .subscription__input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .button.subscription__submit {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .button.subscription__submit:hover {
+      background-color: #a05345;
+    }
+
+    .subscription__icon {
+      margin-right: 10px;
+    }
+
+    /* Estilos para el mensaje de éxito */
+    .success-message {
+      display: none; /* Inicialmente oculto */
+      text-align: center;
+      margin-top: 20px;
+      color: rgb(0, 5, 3);
+      font-size: 18px;
+    }
+  </style>
+
+<!-- Formulario de Suscripción -->
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form class="subscription">
+				<div class="subscription__field">
+					<i class="subscription__icon fas fa-user"></i>
+					<input type="text" class="subscription__input" placeholder="Nombre de Usuario">
+				</div>
+				<div class="subscription__field">
+					<i class="subscription__icon fas fa-envelope"></i>
+					<input type="email" class="subscription__input" placeholder="Correo Electrónico">
+				</div>
+				<div class="subscription__field">
+					<i class="subscription__icon fas fa-lock"></i>
+					<input type="password" class="subscription__input" placeholder="Contraseña">
+				</div>
+        <div class="subscription__field">
+					<i class="subscription__icon fas fa-lock"></i>
+					<input type="password" class="subscription__input" placeholder="Confirmar Contraseña">
+				</div>
+				<button class="button subscription__submit" type="button" onclick="Suscribirse()">
+					<span class="button__text">Suscribirse</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>				
+			</form>
+			<div class="social-login">
+				<h3>También puedes suscribirte con</h3>
+				<div class="social-icons">
+					<a href="https://www.instagram.com/" target="_blank" class="social-login__icon fab fa-instagram"></a>
+					<a href="https://www.facebook.com/"  target="_blank" class="social-login__icon fab fa-facebook"></a>
+					<a href="https://x.com/"  target="_blank" class="social-login__icon fab fa-twitter"></a>
+				</div>
+			</div>
+
+      <!-- Mensaje de éxito -->
+      <div class="success-message" id="successMessage">
+      <h2>¡Registro Exitoso!</h2>
+      <p>Te has registrado correctamente.</p>
+      <a href="index.html" class="button">Ir a Inicio</a>
+      </div>
+
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>
+
+
+<!-- Final -->
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
